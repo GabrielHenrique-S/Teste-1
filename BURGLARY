@@ -1,1 +1,1214 @@
-teste
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int iniciar;
+  string nome;
+  int barulho; // variável que indica quanto de barulho o personagem fez
+  barulho = 0;
+  int ferimento; // variável que indica se o personagem está ferido
+  ferimento = 0;
+
+  // TELA DE INÍCIO 
+
+  cout << "                    ▒█▀▀█ ▒█░▒█ ▒█▀▀█ ▒█▀▀█ ▒█░░░ ░█▀▀█ ▒█▀▀█ "
+          "▒█░░▒█    \n"
+          "                    ▒█▀▀▄ ▒█░▒█ ▒█▄▄▀ ▒█░▄▄ ▒█░░░ ▒█▄▄█ ▒█▄▄▀ "
+          "▒█▄▄▄█    \n"
+          "                    ▒█▄▄█ ░▀▄▄▀ ▒█░▒█ ▒█▄▄█ ▒█▄▄█ ▒█░▒█ ▒█░▒█ "
+          "░░▒█░░\n\n\n";
+
+  // ESCOLHER NOME
+  cout << "     Antes de jogar, escolha um nome para o seu personagem "
+          "(homem):\n\n";
+  getline(cin, nome);
+  fflush(stdin);
+  cout << endl << endl;
+
+  // DIGITAR 1 PARA COMEÇAR A JOGAR
+  cout << "     OK, " << nome << ", digite 1 para iniciar o jogo:\n\n\n\n";
+  cin >> iniciar;
+
+  cout << "     " << nome
+       << " nunca foi o melhor aluno da sala, mas, sempre conseguiu ir bem nas "
+          "provas mesmo sem se esforçar.\n"
+          "     Era visto como um dos mais espertos de sua turma e ao mesmo "
+          "tempo era considerado o mais rebelde e descompromissado com tudo e "
+          "todos.\n"
+          "     Ele tinha uma personalidade de 'bad boy', gostava de quebrar "
+          "as regras e era conhecido por ser desafiador com os alunos mais "
+          "velhos e os professores.\n"
+          "     Depois de se formar, "
+       << nome
+       << " começou a morar sozinho e para conseguir pagar as contas, "
+          "precisava de uma fonte de renda.\n"
+          "     Sem saber o que fazer da vida e sem perspectivas de futuro, "
+       << nome
+       << " liga para Charles Rivera.\n"
+          "     Charles é um amigo de infância e que atualmente ganha dinheiro "
+          "de forma ilegal, possuindo redes em todas as áreas ilegais que você "
+          "pode imaginar.\n\n\n";
+
+  // LIGAR PARA CHARLES 
+  int ligar_charles;
+  cout << "     OK, " << nome
+       << ", digite 1 para ligar para Charles Rivera:\n\n\n\n\n";
+  cin >> ligar_charles;
+
+  cout << "     LIGANDO PARA CHARLES RIVERA...\n"
+          "     ...\n"
+          "     ...\n\n\n"
+          "     Charles: Boa tarde, quem fala?\n\n"
+          "     "
+       << nome << ": Eae, Charles, é o " << nome
+       << ", tudo bem?\n\n"
+          "     Charles: Eae, irmão, quanto tempo, né?\n\n"
+          "     "
+       << nome
+       << ": Pois é, nós não nos falamos desde aquele lance na Argentina ano "
+          "passado, como as coisas estão indo?\n\n"
+          "     Charles: Ótimas, consegui crescer bastante, agora estou "
+          "tentando dar uma legalizada nas coisas, por causa da família. E "
+          "você? Por onde anda?\n\n"
+          "     "
+       << nome
+       << ": Então, Charles, é por isso que liguei, preciso de ajuda, de "
+          "dinheiro, consegue me arrumar um trampo?\n\n"
+          "     Charles: É claro, mano, conta comigo sempre que precisar, vou "
+          "ver aqui o que consigo arrumar pra ti e a noite te aviso.\n\n"
+          "     "
+       << nome
+       << ": Obrigado, Charles, qualquer coisa serve.\n\n\n\n\n\n"
+          "     O dia passou e a noite você recebe uma mensagem de Charles, "
+          "que oferece-lhe três propostas: \n\n";
+
+  // ESCOLHER PROPOSTA
+  int proposta;
+  cout << "     Escolha uma proposta de emprego:\n"
+          "        1: Seguir no ramo de apostas\n"
+          "        2: Tornar-se traficante\n"
+          "        3: Trabalhar de forma legalizada em uma multinacional\n";
+  cin >> proposta;
+  cout << endl << endl;
+
+  // SEGUIR NO RAMO DE APOSTAS
+
+  // PEDIR EMPRÉSTIMO
+  int emprestimo;
+  int apostar;
+  if (proposta == 1) {
+    cout << "     " << nome
+         << " decide entrar de cabeça no mundo das apostas, entretanto, não "
+            "possui sequer um real guardado.\n"
+            "     Portanto, precisa primeiro pedir dinheiro emprestado a "
+            "alguém.\n"
+            "     Para quem pedir dinheiro emprestado?\n"
+            "        1: Vó Laura\n"
+            "        2: Charles Rivera\n"
+            "        3: Empréstimo bancário\n"
+            "        4: Agiota\n\n\n";
+    cin >> emprestimo;
+    cout << endl << endl;
+  }
+
+  // SE TORNAR TRAFICANTE
+  else if (proposta == 2) {
+    cout
+        << "     Você decide se tornar traficante, então, Charles te entrega o "
+           "controle de uma esquina, para você gerenciar sua própria 'boca'.\n"
+           "     Trabalhando todas as noites, você fica surpreso do quão "
+           "lucrativo é esse negócio, que a cada semana cresce mais.\n"
+           "     Mais clientes, mais volume e mais opções, você é realmente "
+           "bom nisso, está administrando muito bem!\n"
+           "     +R$320,00\n"
+           "     +R$410,00\n"
+           "     +R$630,00\n"
+           "     +R$1006,00\n"
+           "     +R$2269,00\n\n";
+
+    int esquema;
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> esquema;
+
+    // A POLÍCIA ACABOU COM SEU "ESQUEMA" E VOCÊ SE ENDIVIDOU 
+    cout << "     Era mais uma noite como qualquer outra, dia de baile, estava "
+            "vendendo muito bem.\n"
+            "     De repente chega a polícia, realizando uma operação que "
+            "acabou com todas as 'bocas' do bairro.\n"
+            "     Você conseguiu escapar, mas, perdeu todo o patrimônio que "
+            "tinha, a polícia apreendeu tudo.\n"
+            "     Inclusive, o que você tinha lucrado, tinha sido investido e "
+            "tudo aquilo foi apreendido também.\n"
+            "     Agora você está falido novamente, mas, se analisar com "
+            "calma, teve sorte, pois poderia estar preso.\n\n";
+  }
+
+  // TRABALHAR DE FORMA LEGALIZADA EM UMA MULTINACIONAL 
+  else if (proposta == 3) {
+    cout << "     Graças a rede de contatos de Charles, você conseguiu uma "
+            "vaga no escritório de uma das maiores multinacionais da cidade, a "
+            "Dalton Empreendimentos.\n"
+            "     Querendo ser promovido, trabalhou duro, sendo sempre o "
+            "primeiro a chegar e o último a sair.\n"
+            "     Mas, não demorou muito para perceber que a empresa é gerida "
+            "por um dono falastrão, magnata e extremamente corrupto.\n"
+            "     A mídia sempre apontou o Sr. Dalton como um bom homem, mas, "
+            "o pouco contato que teve com ele certamente provou o contrário.\n"
+            "     Você viu as injustiças que ocorriam diariamente e sabia que "
+            "algo de errado estava acontecendo.\n"
+            "     Mesmo assim, decidiu continuar trabalhando lá, fingindo que "
+            "não via nada estranho e apenas focando em fazer o seu melhor.\n\n";
+
+    int demissao;
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> demissao;
+
+    // FOI DEMITIDO INJUSTAMENTE
+    cout << "     No entanto, um dia você chega de manhã no escritório e o seu "
+            "responsável pede para que você vá até a sala dele imediatamente.\n"
+            "     Ele te dá a notícia de que você foi demitido da empresa. O "
+            "motivo é que no dia anterior você se recusou a assinar uma "
+            "papelada.\n"
+            "     Você não a assinou, pois se recusou a fazer parte de uma "
+            "fraude que a empresa estava cometendo.\n"
+            "     Uma coisa é fingir que não sabe, outra é fazer parte e ainda "
+            "assinar seu nome junto.\n"
+            "     "
+         << nome
+         << " agora está desolado, muito revoltado com tudo que estava "
+            "acontecendo.\n\n";
+
+    int roubado;
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> roubado;
+
+    // QUANDO CHEGOU EM CASA, VIU QUE SEU APARTAMENTO HAVIA SIDO INVADIDO 
+    cout << "     Ao voltar para seu apartamento, repara que a porta está meio "
+            "aberta e ao entrar, estava tudo revirado, seu apartamento havia "
+            "sido invadido.\n"
+            "     Agora "
+         << nome
+         << " está desempregado, seu apartamento todo revirado e os bens mais "
+            "valiosos foram roubados.\n"
+            "     Extremamente frustado, "
+         << nome
+         << " decide que a partir de agora, fará as coisas de um jeito "
+            "diferente.\n\n";
+  }
+
+  // PEDIR EMPRÉSTIMO PARA VÓ LAURA
+  if (emprestimo == 1) {
+    cout << "     " << nome
+         << " vai até a casa de sua Vó Laura.\n\n\n"
+            "     TOC TOC...\n"
+            "TOC TOC...\n"
+            "...\n\n\n"
+            "     Laura abre a porta de casa, fica surpresa com sua visita "
+            "inesperada e lhe dá um abraço forte e caloroso.\n\n"
+            "     Laura: Entre, entre, meu netinho, como é bom te ver, irei te "
+            "servir um café.\n\n"
+            "     Você entra na casa de sua avó e explica a ela toda a "
+            "situação e de que precisa de um dinheiro emprestado, apenas "
+            "dizendo que será investido em um empreendimento.\n\n"
+            "     Por amar muito você, Laura nem pestanejou e entregou-lhe "
+            "R$20.000,00, dizendo:\n\n"
+            "     Pode ficar com esse dinheiro, já estou velha, não tenho mais "
+            "muito tempo por aqui, além disso, está sobrando, não irá me fazer "
+            "falta, faça bom proveito.\n\n\n";
+
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> apostar;
+    apostar == 1;
+  }
+
+  // PEDIR EMPRÉSTIMO PARA CHARLES RIVERA
+  else if (emprestimo == 2) {
+    cout << "     LIGANDO PARA CHARLES RIVERA...\n"
+            "...\n"
+            "...\n"
+            "     Charles: Eae, "
+         << nome
+         << ", decidiu o que?\n\n"
+            "     "
+         << nome
+         << ": Decidi que vou seguir nesse ramo de apostas aí mesmo, pelo que "
+            "vi de cada proposta, é o que mais me identifico.\n\n"
+            "     Charles: Pode pá então, tá ligado que dá pra ficar muito "
+            "rico com isso, né?\n\n"
+            "     "
+         << nome
+         << ": Sim, sim, mas Charles, preciso de um dinheiro pra começar, "
+            "consegue me dar uma força? Porque não tô a fim de pedir um "
+            "empréstimo pro banco.\n\n"
+            "     Charles: Cara, consigo te dar R$8.000,00, só que é isso e "
+            "acabou, agora é tua hora de conseguir as coisas por mérito, não "
+            "dá pra viver sempre pedindo ajuda para os outros.\n\n"
+            "     "
+         << nome
+         << ": Você está certo, tô te devendo duas agora, prometo que não vou "
+            "te pedir mais nada, você vai ver, vou crescer, ficará orgulhoso "
+            "de mim.\n\n"
+            "     Charles: Esse é o espírito cara, só fica grande quem pensa "
+            "grande, boa sorte aí, se cuide.\n\n\n";
+
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> apostar;
+    apostar == 1;
+  }
+
+  // PEDIR EMPRÉSTIMO BANCÁRIO
+  else if (emprestimo == 3) {
+    cout << "     " << nome
+         << " vai até o banco, fala com o gerente e pede o máximo de "
+            "empréstimo que o banco pode oferecer.\n"
+            "     Por não possuir nenhum histórico financeiro, você conseguiu "
+            "um empréstimo do banco de R$3.000,00, eles não permitiram você "
+            "pegar mais do que isso.\n\n";
+
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> apostar;
+    apostar == 1;
+  }
+
+  // PEDIR EMPRÉSTIMO PARA UM AGIOTA
+  else if (emprestimo == 4) {
+    cout << "     " << nome
+         << " vai até o agiota Fred Huntelaar e pede a ele dinheiro "
+            "emprestado, o agiota disse que estava aberto para negociações.\n"
+            "     Após um longo tempo de conversa você conseguiu R$10.000,00, "
+            "tendo que devolver R$12.000,00 em no máximo 40 dias.\n"
+            "     Caso você não cumpra com sua parte do acordo, Fred deixou "
+            "bem claro que irá tomar as providências necessárias.\n\n";
+
+    cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+    cin >> apostar;
+    apostar == 1;
+  }
+  // VICIOU, APOSTOU TUDO QUE TINHA, FALIU E SE ENDIVIDOU
+  if (apostar == 1) {
+    cout << "     Agora você tem uma graninha para começar a apostar!\n"
+            "     Com a ajuda de um amigo do Charles, você aprende a apostar e "
+            "onde apostar.\n"
+            "     Decide começar apostando em jogos de futebol.\n"
+            "     Qual time terá mais cartões amarelos? Quantos escanteios no "
+            "jogo? Qual time abre o placar? Quem vence a partida?\n"
+            "     Aos poucos, de forma consciente e conservadora, você "
+            "conseguiu seus primeiros resultados, mas quer mais, deseja ficar "
+            "rico.\n"
+            "     Isso faz com que você tome uma decisão arriscada, mude seu "
+            "Modus Operandi e agora começará apostar em cassinos.\n"
+            "     Na primeira noite deu certo, você dobra aquilo que apostou, "
+            "mas a ganância o consumiu.\n"
+            "     Na noite seguinte, começa perdendo, você não aceita sair no "
+            "prejuízo e em poucas horas, perdeu tudo.\n"
+            "     Para piorar, além de não se contentar em perder tudo o que "
+            "tinha, você pegou um dinheiro emprestado e também o perdeu.\n"
+            "     Agora você está falido novamente e com uma grande dívida "
+            "para pagar.\n\n";
+  }
+
+  int sugestao;
+  cout << "     OK, " << nome << ", digite 1 para continuar:\n\n\n";
+  cin >> sugestao;
+
+  // UM "AMIGO" SUGERE A INVASÃO DE UMA PROPRIEDADE PARA QUE VOCÊ POSSA RESOLVER
+  // OS PROBLEMAS - Daniel
+  cout
+      << "     Neste momento, enfurecido com tudo que lhe aconteceu, " << nome
+      << " liga e desabafa para Nick Martinez, um “amigo” que conheceu através "
+         "de Charles.\n"
+         "     Atualmente, Nick se sustenta com truques em jogos de azar e "
+         "roubando carteiras, ele sugere que "
+      << nome
+      << " invada uma casa.\n"
+         "     Ele não sabe quem é o dono, porém afirma que é muito rico e "
+         "ocupado, frequenta a casa raramente e não possui uma rotina comum.\n"
+         "     Acima de tudo, Nick garante que vale a pena, pois ficou sabendo "
+         "que o dono havia instalado um cofre no segundo andar da casa.\n"
+         "     Logo, deve haver algo muito importante de valor guardado ali "
+         "dentro, assim como por toda a casa.\n"
+         "     Devido ao estado emocional de "
+      << nome
+      << ", ele acha a ideia de Nick boa e decide que irá roubar o que tiver "
+         "guardado de tão precioso.\n\n\n";
+
+  // DIGITE 1 PARA INICIAR O ROUBO
+  int roubo;
+  cout << "     OK, " << nome << ", digite 1 para iniciar o roubo:\n\n\n";
+  cin >> roubo;
+
+  // CASA QUE SERÁ INVADIDA - Gabriel
+  cout << endl << endl << endl;
+  cout << "                                                                    "
+          "       \n"
+          "                                                                    "
+          "       \n"
+          "                                                                    "
+          "       \n"
+          "                                                 _______            "
+          "       \n"
+          "                                                |       |           "
+          "       \n"
+          "                                ___|  |________|____     |          "
+          "       \n"
+          "                               /                    |     |         "
+          "       \n"
+          "                              /                      |     |        "
+          "       \n"
+          "                             /                        |     |       "
+          "       \n"
+          "                            /                          |_____|      "
+          "       \n"
+          "                           /____________________________|  |        "
+          "       \n"
+          "                             |                             |        "
+          "       \n"
+          "                             |   __     __     __    __    |        "
+          "       \n"
+          "                             |  |  |   |  |   |  |  |  |   |____  "
+          "______   \n"
+          "                             |_________|' |________________|   |' | "
+          "    |  \n"
+          "                                       ''''                         "
+          "       \n"
+          "                                        '''                         "
+          "       \n"
+          "                                       ' ''                         "
+          "       \n"
+          "                                       '  ''                        "
+          "       \n"
+          "                                                                    "
+          "       \n"
+          "                                                                    "
+          "       \n"
+          "                                                                    "
+          "       \n"
+          "      ___                                                           "
+          "       \n"
+          "     ('_')                                                          "
+          "       \n"
+          "     <__>                                                           "
+          "       \n"
+          "      ||                                                            "
+          "       \n"
+          "                                                                    "
+          "       \n";
+  int escolha1;
+  int escolha1_3;
+  int escolha1_3_1;
+  int escolha1_3_2;
+  int recomeco;
+  int entrar_lavan;
+  int sala_de_estar;
+  int fundos;
+  int tentativa1;
+  int tentativa1_0;
+  int cofre;
+  int tentar_entrar;
+
+  // ESCOLHER COMO ENTRAR NA CASA
+  cout << "     Escolha como entrar na casa:\n"
+          "        1: Entrar pela janela\n"
+          "        2: Tentar abrir a porta da frente\n"
+          "        3: Pular a cerca e entrar pelo quintal\n"
+          "        4: Escalar a casa\n\n";
+  cin >> escolha1;
+  cout << endl << endl;
+
+  // ENTRAR PELA JANELA
+  if (escolha1 == 1) {
+    cout
+        << "     Você tenta abrir a janela, que obviamente e infelizmente "
+           "estava trancada, então, acerta-a com duas cotoveladas e um chute.\n"
+           "     Você conseguiu quebrar o vidro e entrar para dentro de casa "
+           "pulando a janela.\n"
+           "     Porém, enquanto passava pela janela, se desequilibrou e "
+           "raspou com o braço esquerdo em um estilhaço de vidro, causando-lhe "
+           "um corte.\n"
+           "     Além disso, pode ser que o barulho tenha chamado a atenção "
+           "dos vizinhos, tomara que não.\n\n"
+           "     Ok, "
+        << nome << ", digite 1 para continuar:\n";
+    cin >> sala_de_estar;
+    ferimento = ferimento + 2;
+    barulho = barulho + 2;
+  }
+
+  // TENTAR ENTRAR PELA DA FRENTE
+  else if (escolha1 == 2) {
+    cout << "     Na ponta dos pés, você se aproxima da porta silenciosamente, "
+            "até encostar com sua orelha nela e aguarda alguns segundos.\n"
+            "     Esperou caso ouvisse algum barulho, mas não ouviu mais do "
+            "que o assobio dos passarinhos da rua.\n"
+            "     Então, decide olhar embaixo do tapete, nunca se sabe, tem "
+            "gente que esconde a chave ali.\n"
+            "     Infelizmente não estava, porém, decide então fazer o mais "
+            "óbvio e tenta abrir a porta, sem fazer muito barulho, é claro.\n"
+            "     Olhou para os dois lados da rua, ninguém estava vindo, a "
+            "chance que tinha, então, girou a maçaneta...\n"
+            "     Felizmente, o dono esqueceu a porta aberta e você entrou da "
+            "forma mais simples e menos chamativa possível. \n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    cin >> sala_de_estar;
+  }
+
+  // PULAR A CERCA E ENTRAR PELO QUINTAL - Jorge
+  else if (escolha1 == 3) {
+    cout << "     Você se aproxima da cerca, percebe que ela não é tão alta, é "
+            "possível escalá-la e pular para o lado de dentro do quintal.\n"
+            "     Mas, percebe que a parte de cima da cerca possui um "
+            "acabamento muito pontiagudo, não sendo possível se apoiar nele "
+            "sem se machucar.\n"
+            "     O que você deseja fazer?\n"
+            "        1: Tentar usar seu moletom como proteção da cerca\n"
+            "        2: Tentar pular assim mesmo\n\n";
+    cin >> escolha1_3;
+  }
+
+  // USOU MOLETOM
+  if (escolha1_3 == 1) {
+    cout << "     Você tira seu moletom, joga-o na parte de cima da cerca e "
+            "começa a escalar, quando chega na parte de cima, apoia com sua "
+            "mão na parte protegida pelo moletom.\n"
+            "     Consegue pular para o outro lado e chega ao quintal dos "
+            "fundos, sem se ferir, muito bem! \n"
+            "     Porém, começou a chover e está cada vez mais forte, você "
+            "precisa dar um jeito de entrar rapidamente na casa para poder se "
+            "abrigar.\n"
+            "        1: Procurar algo em volta\n"
+            "        2: Tentar arrombar a porta\n\n";
+    cin >> escolha1_3_1;
+  }
+
+  // PULOU ASSIM MESMO
+  else if (escolha1_3 == 2) {
+    cout << "     Obviamente você não pensou direito, até consegue escalar a "
+            "cerca e passar para o lado de dentro, porém, cortou sua mão "
+            "enquanto se apoiava segurando a cerca.\n"
+            "     Agora, sua mão esquerda inteira está sangrando, você precisa "
+            "de algo para enfaixá-la e não perder mais sangue.\n"
+            "        1: Usar seu moletom para estancar o sangramento\n"
+            "        2: Procurar algo em volta\n\n";
+    cin >> escolha1_3_2;
+    ferimento = ferimento + 2;
+  }
+
+  // USOU MOLETOM E FOI PROCURAR ALGO EM VOLTA, ACHA A CHAVE E ENTRA NA
+  // LAVANDERIA
+  if (escolha1_3_1 == 1) {
+    cout << "     Você encontra um pequeno e velho galpão de madeira na parte "
+            "de fora da residência, parece ser uma sala de ferramentas ou algo "
+            "do tipo.\n"
+            "     Tenta abrir a porta, mas ela está trancada, porém, você "
+            "espia pela janela e consegue ver uma folha em cima da mesa.\n"
+            "     SORTE! Após analisar com mais cuidado, você percebe que a "
+            "folha é uma planta da casa.\n"
+            "     Após verificar os detalhes, repara que a lavanderia possui "
+            "uma porta com acesso para o quintal, talvez essa seja sua forma "
+            "de entrar.\n"
+            "     Depois de dar mais uma analisada na planta, tenta ver se "
+            "encontra mais alguma coisa importante e encontra...\n"
+            "     Uma chave! Percebe que é possível alcançá-la enfiando seu "
+            "braço numa fresta entre as ripas de madeira.\n"
+            "     Então, você pega a chave e caminha até a parte de fora da "
+            "lavanderia. Ao chegar, se depara com a porta fechada.\n"
+            "     Você tenta abri-la, porém, ela está trancada, então decide "
+            "usar a chave.\n"
+            "     DEU CERTO! A chave que você pegou era a da porta da "
+            "lavanderia e agora você está do lado de dentro.\n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    cin >> entrar_lavan;
+  }
+
+  // ARROMBA A PORTA E ENTRA NA LAVANDERIA
+  else if (escolha1_3_1 == 2) {
+    cout << "     Você percebe que há uma porta da casa com acesso para o "
+            "quintal, tenta abri-la, mas ela está trancada.\n"
+            "     Então, chuta a porta três vezes até conseguir derrubá-la.\n"
+            "     Tome cuidado, pois fez muito barulho e chamou a atenção dos "
+            "vizinhos.\n"
+            "     A porta lhe deu acesso à lavanderia.\n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    cin >> entrar_lavan;
+    barulho = barulho + 1;
+  }
+
+  // LAVANDERIA
+  if (entrar_lavan == 1) {
+    cout << "     Você entra na lavanderia e de cara se depara com algumas "
+            "roupas ensanguentadas espalhadas por todo o cômodo.\n"
+            "     Assustado e com medo, começa a refletir se fez a escolha "
+            "certa de invadir essa casa.\n"
+            "     "
+         << nome
+         << " olha mais de perto e examina as roupas.\n"
+            "     Um par de botas completamente sujas de barro, calças e "
+            "camisas sociais muito ensaguentadas.\n"
+            "     As botas, tinham apenas uns respingos e olhando mais de "
+            "perto, a camisa tinha alguns rasgos.\n"
+            "     O sangue parecia ser... fresco?!!\n"
+            "     Não fazia muito tempo que algo tinha acontecido.\n"
+            "     Apesar disso, você já estava do lado de dentro, não tem mais "
+            "opção, precisa continuar sua missão.\n"
+            "     Você sai da lavanderia e segue para a sala de estar.\n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    cin >> sala_de_estar;
+  }
+
+  // PULOU ASSIM MESMO E USOU MOLETOM PARA ESTANCAR O SANGRAMENTO
+  if (escolha1_3_2 == 1) {
+    cout << "     Você decide que a melhor ideia no momento é usar o próprio "
+            "moletom para estancar o sangramento.\n"
+            "     FUNCIONOU! Não ficou muito bom, nem confortável, mas a manga "
+            "do moletom serve provisoriamente.\n"
+            "     Você para e respira por uns segundos, tenta se acalmar, "
+            "porém começa a chover muito forte.\n"
+            "     Precisando de um abrigo e com medo de que alguém te veja, "
+            "você decide ir pelo quintal para os fundos da casa em busca de "
+            "uma entrada.\n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    ferimento = ferimento - 1;
+    cin >> fundos;
+  }
+
+  // PULOU ASSIM MESMO E DECIDIU PROCURAR ALGO EM VOLTA
+  else if (escolha1_3_2 == 2) {
+    cout << "     Devido a adrenalina, o desespero e o receio de ser visto, "
+            "você decide que a melhor opção é entrar logo na casa.\n"
+            "     Até porque, repara que uma forte chuva está por vir, então, "
+            "é melhor se proteger.\n"
+            "     Ao olhar ao redor, percebe que no canto do quintal possui um "
+            "pequeno e velho galpão de madeira.\n"
+            "     Se aproximando mais, você vê que ele é um armazém, uma sala "
+            "de ferramentas para quem cuida do jardim.\n"
+            "     Tenta abrir a porta, mas não consegue. A porta está "
+            "trancada.\n"
+            "     Porém, quando espia a janela, seus olhos dão de cara com uma "
+            "folha em cima da mesa.\n"
+            "     SORTE! Após uma rápida olhada, você percebe que a folha é "
+            "uma planta da casa.\n"
+            "     Após analisar alguns detalhes, você repara em uma porta nos "
+            "fundos da casa, que dá acesso para o corredor principal, talvez "
+            "essa seja sua forma de entrar.\n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    cin >> fundos;
+  }
+
+  // FUNDOS
+  if (fundos == 1) {
+    cout << "     Você chega na parte de trás de casa e defronta-se com uma "
+            "porta, que para sua sorte, estava semiaberta\n."
+            "     Sem fazer barulho, você entra na ponta dos pés, com cuidado, "
+            "sem esbarrar em nada.\n"
+            "     E após meia dúzia de passos, encontra um pequeno bilhete "
+            "dobrado no chão, pega-o e abre-o.\n"
+            "     Você tenta ler o que está escrito, mas não consegue, apenas "
+            "vê uma assinatura 'A.D.'.\n"
+            "     Além de estar todo amassado, o bilhete também está um pouco "
+            "molhado e manchado com uma tinta vermelha.\n"
+            "     Olhando um pouco melhor, percebe que talvez não seja tinta, "
+            "pode ser que seja ketchup, molho de tomate, ou até sangue...\n"
+            "     O fato de estar molhado, impede de chegar a uma conclusão "
+            "clara.\n"
+            "     Você o guarda em seu bolso e decide seguir o corredor em "
+            "direção a sala de estar.\n\n"
+            "     Ok, "
+         << nome << ", digite 1 para continuar:\n\n";
+    cin >> sala_de_estar;
+  }
+
+  // ESCALAR A CASA
+  if (escolha1 == 4) {
+    cout << "     Você decide escalar até o telhado da casa e tentar descer "
+            "pela chaminé (igual o papai noel).\n"
+            "     Então você planeja: primeiro, escalar a árvore e subir no "
+            "muro da casa vizinha, depois, subir no telhado da casa vizinha e "
+            "por fim, pular no de um telhado para o outro.\n"
+            "     O plano parece ótimo, hora de executá-lo!\n"
+            "     ...\n"
+            "     Deu certo, agora você está no telhado da casa.\n\n"
+            "     Ok, "
+         << nome
+         << ", digite 1 para descer a chaminé:\n"
+            "     ...\n\n"
+            "     Você acaba caindo direto na sala de estar, causando muito "
+            "barulho e se machucando.\n";
+    cin >> sala_de_estar;
+    ferimento = ferimento + 1;
+    barulho = barulho + 1;
+  }
+
+  // SALA DE ESTAR
+  int escolhaondeir;
+  if (sala_de_estar == 1) {
+    cout
+        << "     Na sala, você é imediatamente atingido pela sensação de "
+           "riqueza.\n"
+           "     A mobília é elegante e a decoração luxuosa, mas algo não "
+           "parece certo.\n"
+           "     Há uma sensação de desordem, como se alguém com pressa "
+           "tivesse revirado e vasculhado o lugar em busca de algo.\n"
+           "     Em cima da mesa, há um jornal do dia de hoje, ele está todo "
+           "aberto e rasurado.\n"
+           "     Ao lado do jornal está uma agenda com algumas anotações, "
+           "inúmeras transações financeiras e as duas últimas folhas foram "
+           "rasgadas.\n"
+           "     Você também nota que a televisão está ligada, mas com o "
+           "volume no zero, provavelmente alguém saiu daqui com pressa.\n"
+           "     Não há mais nada para vasculhar na sala, para onde ir agora?\n"
+           "     Qual lugar deseja procurar primeiro?\n"
+           "        1:Quarto\n"
+           "        2:Cozinha\n"
+           "        3:Banheiro\n\n";
+    cin >> escolhaondeir;
+  }
+
+  // QUARTO - Gabriel
+  if (escolhaondeir == 1) {
+    cout << "     Você entrou no quarto, tudo está muito sujo, parece que "
+            "ninguém dorme ali há tempo, o espelho está quebrado, a cama "
+            "bagunçada e há um armário antigo. \n"
+            "     Não enxerga nenhum bem pessoal e tudo ali é velho, "
+            "provavelmente deve ser um quarto de hóspedes.\n"
+            "     Você caminha lentamente até o armário e ao abri-lo se "
+            "assusta. Nele estão guardadas inúmeras facas, algemas e roupas "
+            "íntimas.\n"
+            "     No meio de tudo aquilo, algo lhe chama a atenção: \n"
+            "     ...\n"
+            "     Após dar mais uma olhada pelo quarto, vê que não há mais "
+            "nada para procurar ali, então decide voltar para a sala.\n\n";
+  }
+
+  // COZINHA
+  else if (escolhaondeir == 2) {
+    cout << "     Você caminha em direção a cozinha e logo vê em cima da "
+            "bancada outro jornal, então se aproxima para ler a manchete "
+            "grifada: \n"
+            "     Folha de SC \n"
+            "     14 de novembro de 2021  \n"
+            "         'Mais de 10 desaparecidos no último ano'\n\n\n"
+            "             O Cap. Nascimento, da polícia militar de Santa "
+            "Catarina, contou a repórteres que\n"
+            "          iniciou uma busca por Helen Midkiff, uma estudante "
+            "universitária da UNEVALE que estava\n"
+            "          viajando para Curitiba. A Sra. Midkiff não é vista "
+            "desde a noite do dia 23 do mês anterior.\n"
+            "             Relatos de pessoas desaparecidas no litoral do "
+            "estado aumentaram drasticamente nos últimos dois anos.\n"
+            "          A maioria dos desaparecidos são jovens universitários. "
+            "Acredita-se que pelo menos 20 pessoas \n"
+            "          tenham desaparecido. A polícia suspeita de crime e "
+            "acredita que possa haver uma conexão\n"
+            "          entre os incidentes. Planos foram feitos em visão de "
+            "aumentar a equipe para avançar nas\n"
+            "          investigações.\n \n"
+
+            "     Para deixar o ambiente ainda mais estranho, na cuba da pia "
+            "há uma faca de açougueiro toda suja de sangue.\n"
+            "     Além de duas fatias carne em uma bandeja, um pote de sal "
+            "aberto e sujeira pelo chão, não há mais o que ver na cozinha.\n"
+            "     Então você decide voltar para a sala. \n \n \n";
+  }
+
+  // BANHEIRO
+  else if (escolhaondeir == 3) {
+    cout << "     Você entrou no banheiro e na mesma hora já sente algo "
+            "peculiar, demora alguns segundos para saber o que é, até que...\n"
+            "     ...\n"
+            "     O CHEIRO! O odor é quase metálico, muito forte, há também um "
+            "cheiro de álcool e água sanitária, então percebe que há dois "
+            "galões de água sanitária vazios no chão. \n"
+            "     O banheiro está todo limpo e esterilizado.\n\n";
+
+    // TRATAR FERIMENTO
+    if (ferimento > 0) {
+      cout << "     Aproveitar a pia do banheiro e os itens de higiene para "
+              "tratar melhor o ferimento?\n"
+              "        1: Sim\n"
+              "        2: Não\n\n";
+      int usar_pia;
+      cin >> usar_pia;
+
+      if (usar_pia == 1) {
+        ferimento = ferimento - 1;
+      }
+    }
+    cout << "     Não há mais nada para fazer no banheiro, então você decide "
+            "voltar para a sala.\n \n \n";
+  }
+
+  // VOLTAR PARA A SALA
+
+  cout << "     Ao voltar para a sala você ouve barulho de trovões, a "
+          "tempestade lá fora está forte e aqui dentro as coisas ficam cada "
+          "vez mais estranhas. \n"
+          "     Ao chegar na sala novamente você repara que do lado da escada "
+          "que leva para o segundo andar há uma escrivaninha.\n"
+          "     E em cima dela um objeto antigo, você não reconhece-o direito, "
+          "mas aparenta ser um rádio, talvez uma caixa de som ou gravador de "
+          "voz.\n"
+          "     Deseja ligar o aparelho?\n"
+          "        1: Sim\n"
+          "        2: Não\n\n";
+  int ligar_aparelho;
+  cin >> ligar_aparelho;
+
+  // LIGAR APARELHO
+  if (ligar_aparelho == 1) {
+    cout << "     Você clicou no botão de ligar e uma música começa a tocar, o "
+            "aparelho está sincronizado com todas caixas de som da casa e o "
+            "volume está no máximo.\n"
+            "     Rapidamente você desliga-o, porém, provavelmente os vizinhos "
+            "escutaram o volume exagerado e repentino.\n";
+    barulho = barulho + 3;
+  }
+
+  // SUBIR PARA O SEGUNDO ANDAR
+  int continuar;
+  cout << "     Você percebe que está perdendo o foco, deve se concentrar na "
+          "missão, então se apressa e sobe a escada para o segundo andar.\n"
+          "     No topo da escada, há uma prateleira e ao se aproximar, você "
+          "encontra uma chave pendurada e escrito logo acima 'escritório', "
+          "você pega a chave e segue adiante.\n \n \n"
+          "     Você está no segundo andar.\n"
+          "     ...\n"
+          "     Na frente da escada, há duas portas trancadas e à sua esquerda "
+          "um enorme cofre, que só pode ser aberto com uma senha de quatro "
+          "dígitos.\n"
+          "     Para chegar ao cofre, primeiro deve passar por uma antessala, "
+          "protegida por grades, dessa forma, é possível ver o cofre mas não "
+          "acessá-lo.\n"
+          "     Parece que tudo ainda pode valer a pena, a recompensa está na "
+          "sua frente, tão perto e ao mesmo tempo tão longe. \n \n \n"
+          "     Ok, "
+       << nome << ", digite 1 para continuar:\n\n\n";
+  cin >> continuar;
+
+  // O QUE FAZER NO SEGUNDO ANDAR?
+  int segundoandar1;
+  cout << "     O que você deseja fazer agora?\n"
+          "        1: Tentar abrir a porta da esquerda\n"
+          "        2: Tentar abrir a porta da direita\n"
+          "        3: Tentar entrar na antessala do cofre\n\n";
+  cin >> segundoandar1;
+
+  // TENTAR ENTRAR NA ANTESSALA DO COFRE
+  if (segundoandar1 == 3) {
+    cout << "     Primeiro você tenta abrir a porta da antessala, porém ela "
+            "está trancada, você observa um pouco mais atrás de outra ideia.\n"
+            "     ..."
+            "     Eis que surge uma! As grades até que são relativamente "
+            "espaçosas entre si, sua ideia é passar entre elas."
+            "     Provavelmente não há espaço para um ser humano conseguir "
+            "passar, mas nunca se sabe, vale a pena tentar.\n"
+            "     Você se espreme o máximo que pode, infelizmente não é o "
+            "suficiente.\n"
+            "     Então, parte para a força bruta, utiliza toda a sua força "
+            "para tentar empurrar a grade um pouco para o lado e conseguir "
+            "passar.\n"
+            "     Porém, a grade é nova, assim como o cofre, portanto, ela "
+            "está muito bem fixada na estrutura da casa.\n\n"
+            "     Tente outro caminho.\n"
+            "        1: Tentar abrir a porta da esquerda\n"
+            "        2: Tentar abrir a porta da direita\n\n";
+    cin >> segundoandar1;
+  }
+
+  // PORTA DA ESQUERDA TRANCADA
+  if (segundoandar1 == 1) {
+    cout << "     Você caminha até a porta da esquerda e tenta abri-la, porém "
+            "ela está trancada, então lembra que pegou a chave do escritório e "
+            "tenta usá-la.\n"
+            "     Não deu certo, então você tenta usar a chave na porta ao "
+            "lado.\n"
+            "     ABRIU!\n";
+  }
+
+  // ESCRITÓRIO
+  else if (segundoandar1 == 2) {
+    cout << "     Você se aproxima da porta da direita e tenta abri-la, porém "
+            "ela está trancada, então, lembra que tinha pego uma chave do "
+            "escritório.\n"
+            "     Resolve testá-la, talvez este seja o escritório. ABRIU!\n";
+  }
+
+  cout << "     Agora você está dentro do escritório.\n"
+          "     Está muito escuro aqui dentro, você procura o interruptor e "
+          "acende uma fraca lâmpada amarela, também abre as cortinas, que "
+          "quando abertas, revelam uma sacada.\n"
+          "     Em cima da mesa há um notebook, semi desmontado e com a tela "
+          "quebrada, do lado, alguns restos de dispositivos, parecem ser HD's, "
+          "completamente destruídos.\n"
+          "     Ao olhar para a parede do fundo da sala, o terror toma conta "
+          "do seu corpo, há inúmeras fotografias de rostos de jovens entre 17 "
+          "e 30 anos.\n"
+          "     A maioria está riscada com um 'X' em vermelho e outras duas "
+          "possuem um 'post-it' colado com datas ainda deste mês.\n"
+          "     Se aproximando mais e utilizando a lanterna do celular para "
+          "iluminar melhor, você inspeciona melhor as fotografias penduradas.\n"
+          "     Todas aquelas que são cortadas pelo X vermelho, as pessoas "
+          "estão com a cara pálida, sem expressões, algumas com os olhos "
+          "fechados, outras até com ferimentos.\n"
+          "     São dezenas delas e abaixo, um quadro cheio de anotações e "
+          "linhas ligando informações dentre elas:\n"
+          "     Cargos, universidades, linhas de ônibus, endereços, números de "
+          "telefone e até grupos, como de música e igreja.\n"
+          "     Você precisa ser cuidadoso e manter a calma, então decide "
+          "abrir as gavetas, ver o que encontra e em uma delas acha um pequeno "
+          "papel com quatro números.\n"
+          "        8177\n"
+          "     Com certeza é uma senha, tomara que seja a do cofre.\n"
+          "     Com o cheiro de incenso queimado dominando o ambiente e "
+          "temendo que o dono da casa apareça a qualquer momento, você decide "
+          "se apressar.\n"
+          "     Ok, "
+       << nome << ", digite 1 para continuar:\n\n\n";
+  int continuar2;
+  cin >> continuar2;
+
+  // ENTRAR NO QUARTO
+  int utilizar;
+  cout << "     Como não é possível passar pelas grades, só há mais uma opção, "
+          "entrar na sala da esquerda e ver se encontra algo útil.\n";
+  if (segundoandar1 == 1) {
+    cout << "     Você sabe que a outra porta está trancada, entretanto, não "
+            "há mais para onde ir, você precisa entrar ali.\n";
+  }
+
+  else if (segundoandar1 == 2) {
+    cout << "     Você tenta abri-la, mas ela também está trancada, "
+            "entretanto, não há mais para onde ir, você precisa entrar ali.\n";
+  }
+
+  cout << "     Como deseja entrar?\n"
+          "        1: Utilizar a força\n"
+          "        2: Utilizar a inteligência\n\n";
+  cin >> utilizar;
+
+  // UTILIZANDO A FORÇA
+  if (utilizar == 1) {
+    cout << "     Você está começando a ficar nervoso, está com medo, com "
+            "pressa, precisa agilizar, então chuta a porta até derrubá-la.\n";
+    barulho = barulho + 2;
+  }
+
+  // UTILIZANDO A INTELIGÊNCIA
+  else if (utilizar == 2) {
+    cout << "     A porta está trancada, você precisa entrar, para e respira "
+            "por um segundo, de repente, tem uma ideia brilhante!\n"
+            "     Você se lembra da sacada do escritório e junto vem uma "
+            "estranha sensação e memória de que ela é conectada com a sacada "
+            "do quarto.\n"
+            "     Entra no escritório novamente e vai até a sacada, elas não "
+            "são conectadas, porém, são muito próximas, menos de um metro de "
+            "distância.\n"
+            "     Você salta para o outro lado e abre a cortina.\n";
+  }
+
+  // QUARTO
+  int continuar3;
+  cout << "     Ok, " << nome << ", digite 1 para continuar:\n\n\n";
+  cin >> continuar3;
+
+  cout << "     Ao entrar, se depara com um luxuoso quarto, cama king size, um "
+          "lustre dourado e até um piano.\n"
+          "     Ademais, nada de intrigante ou chamativo no quarto, entrando "
+          "no closet, que é integrado, você fica aterrorizado.\n"
+          "     Ternos, sobretudos, botas e máscaras de palhaço, Jason, "
+          "Michael Myers, Freddy Krueger, Ghostface, etc.\n"
+          "     Do outro lado do closet, estão expostas inúmeras armas, ou "
+          "objetos que podem matar, espadas, foice, katana, tacos de golfe, "
+          "motosserra, chicotes e muito mais.\n"
+          "     Ao olhar tudo isso, você percebe que achou uma solução para "
+          "passar para a antessala.\n"
+          "     Pega a motosserra e vai em direção às grades, aproveitando que "
+          "é possível abrir a porta do quarto pelo lado de dentro.\n"
+          "     Uma ideia realmente genial, as grades não resistem e em pouco "
+          "tempo são completamente divididas pela motosserra.\n"
+
+          // COFRE
+          "     Frente a frente ao cofre, você digita no painel os números "
+          "anotados que encontrou dentro do escritório:\n"
+          "     8\n"
+          "     1\n"
+          "     7\n"
+          "     7\n\n"
+          "     ...\n\n"
+          "     Não aconteceu nada...\n"
+          "     Dois segundos depois, duas luzes acendem no painel, uma verde "
+          "e uma vermelha, um alarme começa a tocar e a porta do cofre abre.\n"
+          "     Dentro do cofre há múltiplas joias, colares, brincos e anéis, "
+          "todos cravejados com pedras preciosas, além de haver esculturas e "
+          "outros itens antigos.\n"
+          "     Presume-se que estes são itens de colecionador, artefatos "
+          "históricos, com valores inestimáveis.\n"
+          "     Após uns segundos admirando tudo, você volta para a realidade, "
+          "precisa ir rápido, pois o alarme está tocando, alguém pode aparecer "
+          "a qualquer momento.\n"
+          "     Você pega o máximo de itens que consegue, enche os bolsos, "
+          "pescoço e braços, de repente, ouve um barulho muito alto no "
+          "primeiro andar da casa e chama sua atenção.\n"
+          "     Rapidamente, corre até o escritório para olhar as câmeras de "
+          "segurança, que monitoram todos os cômodos da casa.\n"
+          "     Pelas câmeras, você nota um homem muito enfurecido, deve ser o "
+          "dono da casa, caminhando a passos largos e rápidos, indo em direção "
+          "ao segundo andar.\n "
+          "     Provavelmente, até o cofre.\n"
+          "     Rápido, você precisa tomar uma decisão urgentemente!.\n\n"
+
+          // FINAIS
+          "        1: Confrontar o homem\n"
+          "        2: Fugir pela sacada\n"
+          "        3: Fugir pela escada\n"
+          "        4: Se esconder embaixo da cama\n\n";
+
+  int Final, policia, final1, final2, final3, final4;
+  Final = 0;
+  final1 = 0;
+  final2 = 0;
+  final3 = 0;
+  final4 = 0;
+
+  cin >> Final;
+
+  // FINAL CONFRONTA O DONO SEM FERIMENTO
+  if (Final == 1 && ferimento < 1) {
+    cout << "     Após o dono da casa perceber que sua casa foi invadida, ele "
+            "decide ir conferir o cofre e acaba te encontrando.\n"
+            "     O homem fica extremamente irritado com a invasão e vai te "
+            "confrontar. Durante uma discussão, você tenta justificar suas "
+            "ações.\n"
+            "     Mas, o dono da casa não está disposto a ouvi-las e fica cada "
+            "vez mais zangado, até que decide avançar para cima de você.\n"
+            "     Você consegue desviar de parte dos golpes, mas alguns te "
+            "acertaram em cheio.\n"
+            "     Sabendo que precisa tomar uma atitude imediatamente, a fim "
+            "de virar o jogo. Você se lembra das lâminas no closet, corre em "
+            "direção a ele, ignorando toda a dor em seu corpo.\n"
+            "     Pega uma das facas e consegue enfiá-la no pescoço dele, "
+            "sentindo o calor do sangue escorrendo entre seus dedos.\n"
+            "     Sabia que tinha acabado, que não havia mais volta. Respira "
+            "fundo, deixando a adrenalina e a emoção da luta se dissiparem.\n"
+            "     Tinha feito o que precisava ser feito para sobreviver.\n"
+            "     Então, você junta suas joias e vai embora.\n\n";
+    final1 = 3;
+  }
+
+  // FINAL CONFRONTA O DONO COM FERIMENTO
+  else if (Final == 1 && ferimento >= 1) {
+    cout << "     Após o dono da casa perceber que sua casa foi invadida, ele "
+            "decide ir conferir o cofre e acaba te encontrando.\n"
+            "     O homem fica extremamente irritado com a invasão e vai te "
+            "confrontar. Durante uma discussão, você tenta justificar suas "
+            "ações.\n"
+            "     Mas, o dono da casa não está disposto a ouvi-las e fica cada "
+            "vez mais zangado, até que decide avançar em você.\n"
+            "     Após poucas trocações de soco, quando parecia que tinha "
+            "vantagem na luta, você percebe que está ficando fraco, ainda mais "
+            "que as feridas anteriores vão piorando.\n"
+            "     Até chegar ao ponto de você não conseguir mais lutar, "
+            "consequentemente, o dono da casa percebe seus sinais de fraqueza "
+            "e ataca com ainda mais contundência, sem misericórdia.\n"
+            "     Você tenta correr, mas, acaba indo em direção ao closet, que "
+            "está cheio de lâminas, sendo assim, ele pega uma das lâminas e te "
+            "esfaqueia.\n"
+            "     ...\n"
+            "     Você não resiste à facada e morre.\n\n";
+    final1 = 1;
+  }
+
+  // FINAL FUGIR PELA SACADA
+  else if (Final == 2) {
+    cout << "     Após o dono da casa perceber que sua casa foi invadida, ele "
+            "decide ir conferir o cofre.\n"
+            "     Você rapidamente decide fugir pela sacada e consegue fazer "
+            "isso antes do dono chegar, porém, durante a fuga e em um momento "
+            "de adrenalina, você se joga da sacada e em cima da cerca do "
+            "quintal, caindo na calçada, contraindo vários ferimentos graves e "
+            "desmaiando.\n"
+            "     O dono da casa chega até o cofre e percebe que foi roubado, "
+            "mas em nenhum momento ele te encontra.\n"
+            "     ...\n"
+            "     Infelizmente, a polícia te achou desmaiado na calçada e te "
+            "prende, pois você estava com joias roubadas da casa em seus "
+            "bolsos.\n"
+            "     Após se recuperar, você se arrepende profundamente de suas "
+            "ações e percebe o erro que cometeu ao se deixar levar pelo Nick e "
+            "invadir a casa de outra pessoa.\n"
+            "     Agora terá de conviver com as consequências desta decisão na "
+            "prisão.\n\n";
+    final2 = 2;
+  }
+
+  // FINAL DESCER A ESCADA
+  else if (Final == 3) {
+    cout << "     Você percebe que o dono está indo em direção ao cofre e "
+            "decide fugir para evitar ser pego em flagrante.\n"
+            "     Você desce as escadas correndo, mas, acaba se deparando "
+            "frente a frente com o dono na sala de estar, em um momento de "
+            "fúria, ele começa a correr atrás de você.\n"
+            "     Te deixando sem escapatória, sua única opção é fugir pelos "
+            "fundos e pular a cerca.\n"
+            "     Você foge para fora da casa e começa a correr pela rua.\n"
+            "     ...\n"
+            "     Enquanto corre, você ouve o som de passos se aproximando, "
+            "olha para trás e vê o dono da casa ainda te perseguindo.\n"
+            "     Você tenta acelerar o passo e corre o mais rápido possível, "
+            "mas não consegue despistar ele. No entanto, vê uma viatura da "
+            "polícia.\n"
+            "     No momento de desespero você decide:\n"
+            "        1: Correr para a polícia\n"
+            "        2: Correr da polícia\n\n";
+    cin >> policia;
+  }
+
+  // FINAL ESCADA SEM POLÍCIA
+  if (policia == 2) {
+    cout << "     Você escolheu passar longe das viaturas com medo de ser "
+            "preso.\n"
+            "     O dono da casa parece não cansar e começa a diminuir a "
+            "distância entre vocês dois, mas por causa da chuva ele acaba "
+            "perdendo o equilíbrio, escorrega e cai.\n"
+            "     Assim, possibilita que você consiga fugir com o dinheiro e "
+            "as joias em seus bolsos.\n\n";
+    final3 = 3;
+  }
+
+  // FINAL ESCADA COM POLÍCIA
+  else if (policia == 1) {
+    cout
+        << "     Você se aproxima da viatura e pede ajuda aos oficiais, "
+           "explicando que invadiu a casa e está sendo perseguido pelo dono.\n"
+           "     Os policiais ouvem sua história e decidem intervir, detendo o "
+           "dono da casa e exigindo que você preste um depoimento.\n"
+           "     Você se sente aliviado por ter conseguido escapar e agradece "
+           "a intervenção da polícia.\n"
+           "     Então, é levado para prestar depoimento na delegacia e, após "
+           "explicar o que aconteceu, recebe multa e advertência das "
+           "autoridades sobre as consequências de invasão domiciliar.\n"
+           "     Além disso, terá de pagar 6 meses de serviço comunitário. Por "
+           "outro lado, o dono da casa é preso por assassinatos em série.\n\n";
+    final3 = 2;
+  }
+
+  // FINAL SE ESCONDER TENDO FEITO BARULHO
+  else if (Final == 4 && barulho > 3) {
+    cout << "     Você decide se esconder embaixo da cama. Se encolhe o máximo "
+            "que pode e segura a respiração enquanto o homem caminha pelo "
+            "quarto.\n"
+            "     Devido ao excesso de barulho que fez durante a invasão, os "
+            "vizinhos ligaram fazendo denúncias e o dono da casa agora está "
+            "procurando por você.\n"
+            "      ...\n"
+            "      O cheiro ali embaixo é sufocante e está te incomodando "
+            "muito, por causa da adrenalina e o medo de ser pego.\n"
+            "      Num primeiro momento, você acaba nem percebendo que está "
+            "deitado em cima de um carpete encharcado de sangue.\n"
+            "      Após o choque ao perceber a situação onde se encontra, sem "
+            "querer, você se mexe e faz um pequeno barulho e para...\n"
+            "      O seu azar, foi o suficiente para o dono da casa escutar e "
+            "você acaba virando sua próxima vítima.\n\n";
+    final4 = 1;
+  }
+
+  // FINAL SE ESCONDER NÃO TENDO FEITO BARULHO
+  else if (Final == 4 && barulho <= 3) {
+    cout << "     Você decide se esconder embaixo da cama. Se encolhe o máximo "
+            "que pode e segura a respiração enquanto o homem caminha pelo "
+            "quarto.\n"
+            "     Ele sabe que a casa foi invadida, acha que o ladrão já "
+            "fugiu, mas segue procurando-o pela casa.\n"
+            "     Você pode ouvir seus passos pesados, a respiração ofegante e "
+            "os sons abafados de seus movimentos...\n"
+            "     Seu coração acelera enquanto você se concentra em não fazer "
+            "nenhum barulho.\n"
+            "     O dono parece procurar por algo, mas não percebe que você "
+            "está escondido bem ali embaixo.\n"
+            "     Ele vai para outro cômodo e você aproveita a brecha para "
+            "sair, percebe que a porta está entreaberta e sai do quarto.\n"
+            "     Com muita sorte, consegue sair pelos fundos sem fazer "
+            "barulho.\n"
+            "     ...\n"
+            "     Você se sente aliviado por ter conseguido escapar e vai "
+            "embora com as joias.\n"
+            "     Na manhã seguinte, vai até a delegacia prestar depoimento, "
+            "omite sobre sua invasão, mas denuncia as atividades criminosas "
+            "daquele homem.\n"
+            "     Após isso, o dono da casa é preso por assassinatos em "
+            "série.\n\n";
+    final4 = 3;
+  }
+
+  // TELA FIM DE JOGO
+  if (final1 == 1 || final4 == 1) {
+    cout << "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀\n"
+            "     ██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼\n"
+            "     ██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀\n"
+            "     ██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼\n"
+            "     ███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼\n"
+            "     ██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
+            "     ██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼\n"
+            "     ██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
+            "     ███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼████▄┼┼┼▄▄▄▄▄▄▄┼┼┼▄████┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼▀▀█▄█████████▄█▀▀┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼█████████████┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼██▀▀▀███▀▀▀██┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼██┼┼┼███┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼█████▀▄▀█████┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼┼███████████┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼▄▄▄██┼┼█▀█▀█┼┼██▄▄▄┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n";
+  } else if (final2 == 2 || final3 == 2) {
+    cout << "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀\n"
+            "     ██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼\n"
+            "     ██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀\n"
+            "     ██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼\n"
+            "     ███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
+            "     ███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼\n"
+            "     ██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
+            "     ██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼\n"
+            "     ██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
+            "     ███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄\n"
+            "     ┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n";
+
+  } else if (final3 == 3 || final1 == 3 || final4 == 3) {
+    cout << "\n"
+
+            " █████ ████  ██████  █████ ████    █████ ███ █████ ████  ████████ "
+            " \n"
+            "░░███ ░███  ███░░███░░███ ░███    ░░███ ░███░░███ ░░███ "
+            "░░███░░███ \n"
+            " ░███ ░███ ░███ ░███ ░███ ░███     ░███ ░███ ░███  ░███  ░███ "
+            "░███ \n"
+            " ░███ ░███ ░███ ░███ ░███ ░███     ░░███████████   ░███  ░███ "
+            "░███ \n"
+            " ░░███████ ░░██████  ░░████████     ░░████░████    █████ ████ "
+            "█████\n"
+            "  ░░░░░███  ░░░░░░    ░░░░░░░░       ░░░░ ░░░░    ░░░░░ ░░░░ "
+            "░░░░░ \n"
+            "  ███ ░███                                                        "
+            " \n"
+            " ░░██████                                                         "
+            " \n"
+            "  ░░░░░░                                                          "
+            " \n";
+  }
+  return 0;
+}
